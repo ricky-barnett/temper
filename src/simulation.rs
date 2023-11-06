@@ -149,7 +149,7 @@ impl<'de> Deserialize<'de> for PermissiveUint {
 fn chain_id_to_fork_url(chain_id: u64) -> Result<String, Rejection> {
     match chain_id {
         // ethereum
-        1 => Ok("http://172.17.0.2:8545".to_string()),
+        1 => Ok("https://nameless-misty-glade.quiknode.pro/f19ba0bd47671b23746bae5fb5697165d44e3f7f/".to_string()),
         5 => Ok("http://172.17.0.2:8545".to_string()),
         11155111 => Ok("https://eth-sepolia.g.alchemy.com/v2/demo".to_string()),
         // polygon
