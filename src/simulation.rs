@@ -152,6 +152,8 @@ fn chain_id_to_fork_url(chain_id: u64) -> Result<String, Rejection> {
         1 => Ok("http://172.18.0.2:8545".to_string()),
         5 => Ok("http://172.18.0.2:8545".to_string()),
         11155111 => Ok("https://eth-sepolia.g.alchemy.com/v2/demo".to_string()),
+        // Blast
+        168587773 => Ok("https://aged-lingering-frost.blast-sepolia.quiknode.pro/b9c771e841cad5820e916cd611cfd1e9f23e26cc/".to_string()),
         // polygon
         137 => Ok("https://polygon-mainnet.g.alchemy.com/v2/demo".to_string()),
         80001 => Ok("https://polygon-mumbai.g.alchemy.com/v2/demo".to_string()),
