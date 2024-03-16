@@ -148,34 +148,16 @@ impl<'de> Deserialize<'de> for PermissiveUint {
 
 fn chain_id_to_fork_url(chain_id: u64) -> Result<String, Rejection> {
     match chain_id {
-        // ethereum
-        1 => Ok("http://172.18.0.2:8545".to_string()),
+        // Eth Mainnet
+        1 => Ok("http://172.18.0.3:8545".to_string()),
+        // Eth Goerli
         5 => Ok("http://172.18.0.2:8545".to_string()),
+        // Eth Sepolia
         11155111 => Ok("https://eth-sepolia.g.alchemy.com/v2/demo".to_string()),
         // Blast Mainnet
-        81457 => Ok("http://172.18.0.3:9545".to_string()),
-        // Blast Sepolia
-        168587773 => Ok("http://172.18.0.3:9545".to_string()),
-        // polygon
-        137 => Ok("https://polygon-mainnet.g.alchemy.com/v2/demo".to_string()),
-        80001 => Ok("https://polygon-mumbai.g.alchemy.com/v2/demo".to_string()),
-        // avalanche
-        43114 => Ok("https://api.avax.network/ext/bc/C/rpc".to_string()),
-        43113 => Ok("https://api.avax-test.network/ext/bc/C/rpc".to_string()),
-        // fantom
-        250 => Ok("https://rpcapi.fantom.network/".to_string()),
-        4002 => Ok("https://rpc.testnet.fantom.network/".to_string()),
-        // xdai
-        100 => Ok("https://rpc.xdaichain.com/".to_string()),
-        // bsc
-        56 => Ok("https://bsc-dataseed.binance.org/".to_string()),
-        97 => Ok("https://data-seed-prebsc-1-s1.binance.org:8545/".to_string()),
-        // arbitrum
-        42161 => Ok("https://arb1.arbitrum.io/rpc".to_string()),
-        421613 => Ok("https://goerli-rollup.arbitrum.io/rpc".to_string()),
-        // optimism
-        10 => Ok("https://mainnet.optimism.io/".to_string()),
-        420 => Ok("https://goerli.optimism.io/".to_string()),
+        81457 => Ok("http://172.18.0.4:6545".to_string()),
+        // Base Mainnet
+        8453 => Ok("http://172.18.0.5:7545".to_string()),
         _ => Err(NoURLForChainIdError.into()),
     }
 }
