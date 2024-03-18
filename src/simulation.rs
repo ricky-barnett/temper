@@ -155,9 +155,9 @@ fn chain_id_to_fork_url(chain_id: u64) -> Result<String, Rejection> {
         // Eth Sepolia
         11155111 => Ok("https://eth-sepolia.g.alchemy.com/v2/demo".to_string()),
         // Blast Mainnet
-        81457 => Ok("http://172.18.0.4:6545".to_string()),
+        81457 => Ok("http://172.18.0.4:7545".to_string()),
         // Base Mainnet
-        8453 => Ok("http://172.18.0.3:7545".to_string()),
+        8453 => Ok("http://172.18.0.3:6545".to_string()),
         _ => Err(NoURLForChainIdError.into()),
     }
 }
