@@ -157,7 +157,7 @@ fn chain_id_to_fork_url(chain_id: u64) -> Result<String, Rejection> {
         // Blast Mainnet
         81457 => Ok("http://172.18.0.4:7545".to_string()),
         // Base Mainnet
-        8453 => Ok("http://172.18.0.2:6545".to_string()),
+        8453 => Ok("http://172.18.0.3:6545".to_string()),
         _ => Err(NoURLForChainIdError.into()),
     }
 }
