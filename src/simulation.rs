@@ -149,7 +149,7 @@ impl<'de> Deserialize<'de> for PermissiveUint {
 fn chain_id_to_fork_url(chain_id: u64) -> Result<String, Rejection> {
     match chain_id {
         // Eth Mainnet
-        1 => Ok("http://172.18.0.3:8545".to_string()),
+        1 => Ok("http://172.18.0.4:8545".to_string()),
         // Eth Goerli
         5 => Ok("http://172.18.0.2:8545".to_string()),
         // Eth Sepolia
